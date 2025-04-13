@@ -1,0 +1,29 @@
+<div class="center">
+  <h2>Médailles par Pays</h2>
+
+  <!-- Statistiques dynamiques via async pipe -->
+
+  <div class="home-stats">
+    <ng-container *ngIf="numberOfJO$ | async as numberOfJO">
+      <p class="data"><strong>Nombre de JO :</strong> {{ numberOfJO }}</p>
+    </ng-container>
+
+    <ng-container *ngIf="numberOfCountries$ | async as numberOfCountries">
+      <p class="data"><strong>Nombre de pays :</strong> {{ numberOfCountries }}</p>
+    </ng-container>
+  </div>
+
+  <!-- Graphique donut -->
+  <ngx-charts-pie-chart
+    [results]="data$ | async"
+    [view]="view"
+    [legend]="showLegend"
+    [labels]="showLabels"
+    [doughnut]="true"
+    [arcWidth]="arcWidth"
+    [gradient]="false"
+    [scheme]="colorScheme"
+    (select)="onSelect($event)">
+  </ngx-charts-pie-chart>
+
+</div>

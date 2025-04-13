@@ -1,0 +1,26 @@
+<div class="center">
+
+  <h2>{{ countryData?.country }}</h2>
+  
+  <div class="summary">
+    <p class="data"><strong>Nombre de participations :</strong> {{ summary.participations }}</p>
+    <p class="data"><strong>Total des médailles :</strong> {{ summary.totalMedals }}</p>
+    <p class="data"><strong>Total des athlètes :</strong> {{ summary.totalAthletes }}</p>
+  </div>
+  
+  <ngx-charts-line-chart
+    [view]="view"
+    [results]="chartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-line-chart>
+  <a routerLink="/" class="back-link">← Retour à l'accueil</a>
+
+</div>
+

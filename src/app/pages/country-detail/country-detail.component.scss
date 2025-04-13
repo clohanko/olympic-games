@@ -1,0 +1,38 @@
+.center {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  h2 
+    {
+        background: rgb(4, 131, 143);
+        padding: 15px;
+        color: white;
+        border-radius: 10px;
+      }
+  
+.summary {
+    display: flex;
+}
+
+p.data {
+    padding: 15px;
+    border: solid #04838f 3px;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
